@@ -5,12 +5,14 @@ import coverImg from "../images/photo2.jpg";
 //import "./SearchList.css";
 import './SearchHeader.css'
 
+const api_key=import.meta.env.VITE_REACT_APP_NPS_API_KEY;
+
 const SearchList = () => {
   const {searches, resultName} = useGlobalContext();
   const parksWithCovers = searches.map((singleSearch) => {
     return {
       ...singleSearch,
-    cover_img: singleSearch.cover_id ? `https://developer.nps.gov/api/v1/multimedia/galleries/assets?limit=50&q=${singleSearch.cover_id}&api_key=Wrk46hd2qqrRis6VpJA8CT12EeDczzGa9dYRBjYk` : coverImg
+    cover_img: singleSearch.cover_id ? `https://developer.nps.gov/api/v1/multimedia/galleries/assets?limit=50&q=${singleSearch.cover_id}&api_key=${api_key}` : coverImg
     }
     //This shows the picture in the search
   });

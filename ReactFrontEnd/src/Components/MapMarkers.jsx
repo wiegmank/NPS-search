@@ -6,8 +6,6 @@ function getLatLong() {
     const [lat, setLat] = useState([]);
 
     const coordURL = "https://nominatim.openstreetmap.org/search?street="+street+"&postalcode="+postalcode+"&format=json";
-    
-    //"https://nominatim.openstreetmap.org/search?street=511%20north%20clay&postalcode=63135&format=json"
 
     axios
     .get(coordURL, 
@@ -23,7 +21,7 @@ function getLatLong() {
     });
    
 }
-
+      //for multiple map markers
         // getLatLong(address);
 
         //TODO 1

@@ -79,9 +79,7 @@ function ParkDetails() {
     queryFn: () =>
       fetch(
         "https://developer.nps.gov/api/v1/parks?parkCode=" +
-          parkId +
-          "&api_key=Wrk46hd2qqrRis6VpJA8CT12EeDczzGa9dYRBjYk"
-      ).then((res) => res.json()),
+          parkId + "&api_key=" + api_key ).then((res) => res.json()),
   });
 
   if (error) return <div>There was an error</div>;
